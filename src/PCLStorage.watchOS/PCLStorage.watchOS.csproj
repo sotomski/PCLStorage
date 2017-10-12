@@ -15,7 +15,7 @@
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
     <OutputPath>bin\Debug</OutputPath>
-    <DefineConstants>DEBUG;WATCHOS</DefineConstants>
+    <DefineConstants>DEBUG;WATCHOS;XAMARIN;FILE_SYSTEM</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <CodesignKey>iPhone Developer</CodesignKey>
@@ -70,6 +70,9 @@
     </Compile>
     <Compile Include="..\PCLStorage\Exceptions\PCLStorageExceptions.cs">
       <Link>Exceptions\PCLStorageExceptions.cs</Link>
+    </Compile>
+    <Compile Include="..\PCLStorage.FileSystem.Desktop\DesktopFileSystem.cs">
+      <Link>DesktopFileSystem.cs</Link>
     </Compile>
   </ItemGroup>
   <ItemGroup>

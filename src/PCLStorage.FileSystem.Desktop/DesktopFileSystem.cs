@@ -24,7 +24,7 @@ namespace PCLStorage
                 //var localAppData = Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData);
 #if ANDROID
                 var localAppData = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
-#elif IOS
+#elif IOS || WATCHOS
                 var documents = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
                 var localAppData = Path.Combine(documents, "..", "Library");
 #else
@@ -41,7 +41,7 @@ namespace PCLStorage
         {
             get
             {
-#if ANDROID || IOS
+#if ANDROID || IOS || WATCHOS
                 return null;
 #else
                 //  SpecialFolder.ApplicationData is not app-specific, so use the Windows Forms API to get the app data path
